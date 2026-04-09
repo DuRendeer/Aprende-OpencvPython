@@ -18,7 +18,7 @@ def main():
     midia    = Midia(pasta_sons="sons", pasta_imagens="imagens")
 
     preto = np.zeros((400, 400, 3), dtype=np.uint8)
-    cv2.imshow("Gesto - Imagem", preto)
+    cv2.imshow("Teu Votu", preto)
     cv2.waitKey(1)
 
     while True:
@@ -33,7 +33,7 @@ def main():
         cv2.putText(frame, label, (10, 220),
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
 
-        cv2.imshow("Gesto -> Som", frame)
+        cv2.imshow("Tu", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 

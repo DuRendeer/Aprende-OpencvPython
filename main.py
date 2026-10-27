@@ -1,4 +1,14 @@
+import os
+import subprocess
 import sys
+
+PASTA = os.path.dirname(os.path.abspath(__file__))
+VENV = os.path.join(PASTA, ".venv")
+PYTHON_VENV = os.path.join(VENV, "Scripts", "python.exe")
+
+if os.path.exists(PYTHON_VENV) and os.path.normcase(sys.prefix) != os.path.normcase(VENV):
+    sys.exit(subprocess.call([PYTHON_VENV, os.path.abspath(__file__)]))
+
 import cv2
 import numpy as np
 sys.path.insert(0, "partes")

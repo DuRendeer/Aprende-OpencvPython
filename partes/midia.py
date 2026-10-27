@@ -34,5 +34,5 @@ class Midia:
                 cv2.waitKey(1)
         else:
             preto = np.zeros((400, 400, 3), dtype=np.uint8)
-            cv2.imshow("Tu", preto)
+            cv2.imshow("Teu Votu", preto)
             cv2.waitKey(1)
